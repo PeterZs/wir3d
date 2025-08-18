@@ -87,3 +87,5 @@ python optimize_twostage_final.py ./data/dragon/dragon.obj --init-type-sem furth
     year      = {2025},
 }
 ```
+## Acknowledgements
+This research was supported by grant #2022363 from the United States - Israel Binational Science Foundation (BSF), grant #2304481 from the National Science Foundation (NSF), and gifts from Adobe, Snap, and Google.
