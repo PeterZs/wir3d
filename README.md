@@ -1,7 +1,7 @@
 # WIR3D (ICCV 2025 Oral)
 ![teaser](assets/teaser.png)
 
-[Project Page](https://threedle.github.io/wir3d/)
+[Project Page](https://threedle.github.io/wir3d/) | [Paper](https://arxiv.org/abs/2505.04813)
 
 Official implementation of "WIR3D: Visually-Informed and Geometry-Aware 3D Shape Abstraction"
 
