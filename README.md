@@ -78,6 +78,11 @@ python optimize_twostage_final.py ./data/dragon/dragon.obj --init-type-sem furth
 ```
 ![dragon](assets/dragon_example.gif)
 ## Interactive Deformation
+
+
+https://github.com/user-attachments/assets/ee77aa06-26d3-4a05-9386-d71bcd1932ae
+
+
 Our proof-of-concept deformation application can be run using `interactive_deformation.py`. We provide the data for the chair example shown in the paper (data/chair/chair.obj, data/chair/bestcurves.pt).
 
 ```
