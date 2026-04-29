@@ -77,6 +77,21 @@ BLENDER36={path to blender executable} ./preprocess.sh ./data/dragon/dragon.obj 
 python optimize_twostage_final.py ./data/dragon/dragon.obj --init-type-sem furthest --sem_clip_model_name ViT-L/14 --sem-spatial-weight-base 0 --sem_frozen_init_lr 0.0001 --geoseed 22 --semseed 23 --setseed --init_keypoint_dir_sem ./data/dragon/keypoints.pt --nsemcurves 30 --outputdir ./outputs/wir3d/dragon
 ```
 ![dragon](assets/dragon_example.gif)
+## Interactive Deformation
+Our proof-of-concept deformation application can be run using `interactive_deformation.py`. We provide the data for the chair example shown in the paper (data/chair/chair.obj, data/chair/bestcurves.pt).
+
+```
+python interactive_deformation.py data/chair/chair.obj data/chair/bestcurves.pt
+```
+
+Many other parameters are exposed but are generally not necessary. These can be reviewed by calling `python interactive_deformation.py -h`.
+
+The GUI also allows for exporting the deformed mesh and corresponding deformation data. The export will be saved to `{curvedir}/deformations` and include:
+- `defcache.pkl`: dict indexed by (curve index, control point index) with the final assigned translation to the control point. If the whole curve is transformed, then control point index = None. 
+- `deformed_curves.npy`: np.ndarray of deformed curves 
+- `deformed_mesh.obj`: deformed mesh obj
+- `deformed_quantities.npy`: deformation values interpolated along bezier curve paths (samples defined by --t parameter) 
+
 ## Citation
 ```
 @InProceedings{Liu_2025_ICCV,
